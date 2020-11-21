@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Mandalum from '../src/Mandalum';
 
 
