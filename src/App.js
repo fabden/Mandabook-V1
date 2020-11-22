@@ -6,8 +6,10 @@ import Mandalum from '../src/Mandalum';
 function App() {
 
   return (
-    <div>      
-      <Mandalum />      
+    <div className="app">      
+      <Mandalum mand={1}/>
+      <Mandalum mand={2}/> 
+      <Mandalum mand={3}/>                 
     </div>
   );
 }
