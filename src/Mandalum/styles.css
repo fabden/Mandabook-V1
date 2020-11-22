@@ -1,18 +1,15 @@
-.mandalRoot{
-    width: 600px;
-    height: 600px;
-    background-color: transparent;   
-}
 
 .mandalaDisplay{
-    width: 600px;
-    height: 600px;  
+    min-width: 280px;
+    min-height:280px;  
     border-radius: 100%;   
     background-color:transparent;   
+    border: 2px solid black;
+
 }
 
 path {fill : none ;
-     stroke-width : 1 ; 
+     stroke-width : 1  ; 
      stroke : rgb(5, 5, 5);
     }
 
@@ -25,7 +22,11 @@ path {fill : none ;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin:10px;
 }
 input{
-    margin: 10px;
+    margin: 3em;
+}
+.svgmettre{
+    display: none;
 }
