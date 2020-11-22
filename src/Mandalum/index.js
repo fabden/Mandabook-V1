@@ -1,42 +1,47 @@
-import React from 'react';
+import React,{useState} from 'react';
 import md5 from 'md5';
 
 import './styles.css';
 
 function Mandalum() {
 
-const monb= md5('Fafbrfffff,,tnjkjknk,uyk,nui,fice');
-console.log(monb);
-console.log(monb.slice(0,2))
-console.log(monb.slice(2,4))
-console.log(monb.slice(4,6))
-console.log(monb.slice(6,8))
-console.log(monb.slice(8,10))
-console.log(monb.slice(10,12))
-console.log(monb.slice(12,14))
-console.log(monb.slice(14,16))
-console.log(monb.slice(16,18))
-console.log(monb.slice(18,20))
-console.log(monb.slice(20,22))
-console.log(monb.slice(22,24))
-console.log(monb.slice(24,26))
-console.log(monb.slice(26,28))
-console.log(monb.slice(28,30))
-console.log(monb.slice(30,32))
-console.log(monb.length);
-console.log(monb.toString(2))
-console.log(parseInt(monb.slice(30,32),16).toString(8));
+const [stateval, setstateval] = useState("");
 
+const modif = (e) =>{ 
+  setstateval(e.target.value)
+};
+const monb= md5(stateval);
+const var1= parseInt(monb.slice(0,2),16).toString(8)
+const var2=parseInt(monb.slice(2,4),16).toString(8)
+const var3=parseInt(monb.slice(4,6),16).toString(8)
+const var4=parseInt(monb.slice(6,8),16).toString(8)
+const var5=parseInt(monb.slice(8,10),16).toString(8)
+const var6=parseInt(monb.slice(10,12),16).toString(8)
+const var7=parseInt(monb.slice(12,14),16).toString(8)
+const var8=parseInt(monb.slice(14,16),16).toString(8)
+const var9=parseInt(monb.slice(16,18),16).toString(8)
+const var10=parseInt(monb.slice(18,20),16).toString(8)
+const var11=parseInt(monb.slice(20,22),16).toString(8)
+const var12=parseInt(monb.slice(22,24),16).toString(8)
+const var13=parseInt(monb.slice(24,26),16).toString(8)
+const var14=parseInt(monb.slice(26,28),16).toString(8)
+const var15=parseInt(monb.slice(28,30),16).toString(8)
+const var16=parseInt(monb.slice(30,32),16).toString(8)
 
+const mandalvar=`M `+var1+`,`+var2+` C `+var3+`,`+var4+` `+var5+`,`+var6+` `+var7+`,`+var8
+const mandalvar2=`M `+var9+`,`+var10+` C `+var11+`,`+var12+` `+var13+`,`+var14+` `+var15+`,`+var16
 
     return (
-      <div >
+      <div className="center">
         <svg >  
         <defs>              
-            <path d="M 230,346 C 285,66 654,66 4,6" id="bird"/>  
-            <path d="M 267,36 C 445,64 64,164 44,6" id="bird2"/> 
+            <path d={mandalvar} id="bird"/>  
+            <path d={mandalvar2} id="bird2"/> 
         </defs>        
-        </svg>     
+        </svg>  
+        <input onChange={(e)=>modif(e)} value={stateval} > 
+
+        </input>   
         <svg  className="mandalaDisplay" >
             <use xlinkHref="#bird" className="rotation" style={{transform:`rotate(0deg)`}} />
             <use xlinkHref="#bird2" className="rotation" style={{transform:`rotate(10deg)`}} />
@@ -73,8 +78,7 @@ console.log(parseInt(monb.slice(30,32),16).toString(8));
             <use xlinkHref="#bird2" className="rotation" style={{transform:`rotate(320deg)`}} />
             <use xlinkHref="#bird" className="rotation" style={{transform:`rotate(330deg)`}} />
             <use xlinkHref="#bird2" className="rotation" style={{transform:`rotate(340deg)`}} />
-            <use xlinkHref="#bird" className="rotation" style={{transform:`rotate(350deg)`}} />
-             
+            <use xlinkHref="#bird" className="rotation" style={{transform:`rotate(350deg)`}} />             
         </svg>
       </div>
     );
