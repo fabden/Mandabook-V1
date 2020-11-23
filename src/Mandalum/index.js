@@ -73,7 +73,7 @@ const randomfixe = ()=>{
         </defs>        
         </svg>  
         <input onChange={(e)=>onchangeinput(e)} ></input>
-        <button onClick={(e)=>randomfixe(e)}> Random </button>
+        <button onClick={(e)=>randomfixe(e)}>Aleatoire</button>
         <svg  className="mandalaDisplay" >
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} />
