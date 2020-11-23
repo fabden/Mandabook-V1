@@ -1,7 +1,7 @@
 
 .mandalaDisplay{
-    min-width:300px;
-    min-height:300px;  
+    min-width:20vw;
+    min-height:20vw;  
     border-radius: 100%;   
     background-color:transparent;   
     border: 2px solid black;
@@ -25,7 +25,7 @@ path {fill : none ;
     margin:10px;
 }
 input{
-    margin: 1em;
+    margin: 1.2em;
     height: 1.7em;
     font-size: 1em;
 }
