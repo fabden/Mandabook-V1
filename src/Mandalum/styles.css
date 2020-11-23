@@ -25,10 +25,13 @@ path {fill : none ;
     margin:10px;
 }
 input{
-    margin: 3em;
+    margin: 1em;
     height: 1.7em;
     font-size: 1em;
 }
 .svgmettre{
     display: none;
+}
+button{
+    margin: 1em;
 }

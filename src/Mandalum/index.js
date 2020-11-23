@@ -4,13 +4,13 @@ import md5 from 'md5';
 import './styles.css';
 
 function Mandalum({mand}) {
-  //state input 
+//state input 
   const [stateval, setstateval] = useState({inputval:null,
     var1:0,var2:0,var3:0,var4:0,var5:0,var6:0,var7:0,var8:0,var9:0,var10:0,var11:0,var12:0,var13:0,var14:0,var15:0,var16:0});
 
-  //fonction input controlé
+//fonction input controlé
   const onchangeinput = (e) =>{   
-    const monb= md5(e.target.value);
+    const monb= md5(e.target.value);    
     setstateval({...stateval,
       inputval:e.target.value,
       var1:parseInt(monb.slice(0,2),16).toString(8),
@@ -31,15 +31,40 @@ function Mandalum({mand}) {
       var16:parseInt(monb.slice(30,32),16).toString(8),
     });
 
-  //reinisialise les varaibles si input vide
+//reinisialise les varaibles si input vide
     if(e.target.value===""){
       setstateval({inputval:null,
     var1:0,var2:0,var3:0,var4:0,var5:0,var6:0,var7:0,var8:0,var9:0,var10:0,var11:0,var12:0,var13:0,var14:0,var15:0,var16:0});
-
     };}
 
+//fonction randomfixe 
+const randomfixe = ()=>{ 
+  setstateval({...stateval,    
+    var1:Math.floor(Math.random()*255),
+    var2:Math.floor(Math.random()*255),
+    var3:Math.floor(Math.random()*255),
+    var4:Math.floor(Math.random()*255),
+    var5:Math.floor(Math.random()*255),
+    var6:Math.floor(Math.random()*255),
+    var7:Math.floor(Math.random()*255),
+    var8:Math.floor(Math.random()*255),
+    var9:Math.floor(Math.random()*255),
+    var10:Math.floor(Math.random()*255),
+    var11:Math.floor(Math.random()*255),
+    var12:Math.floor(Math.random()*255),
+    var13:Math.floor(Math.random()*255),
+    var14:Math.floor(Math.random()*255),
+    var15:Math.floor(Math.random()*255),
+    var16:Math.floor(Math.random()*255),
+  });
+}
+
+//random animation
+
+const randommove = ()=>{
+  
+}
     
-   
 
     return (
       <div className="center">
@@ -48,49 +73,49 @@ function Mandalum({mand}) {
           <g id={`line`+mand+`1`}>            
             <path d={`M `+stateval.var1+`,`+stateval.var2+` C `+stateval.var3+`,`+stateval.var4+` `+stateval.var5+`,`+stateval.var6+` `+stateval.var7+`,`+stateval.var8} />  
             <path d={`M `+stateval.var9+`,`+stateval.var10+` C `+stateval.var11+`,`+stateval.var12+` `+stateval.var13+`,`+stateval.var14+` `+stateval.var15+`,`+stateval.var16}/> 
-        </g>  
-        <g id={`line`+mand+`2`}>
-            <path d={`M `+stateval.var10+`,`+stateval.var1+` C `+stateval.var11+`,`+stateval.var12+` `+stateval.var13+`,`+stateval.var14+` `+stateval.var15+`,`+stateval.var16} />
-        </g>
+            <path d={`M `+stateval.var16+`,`+stateval.var15+` C `+stateval.var14+`,`+stateval.var13+` `+stateval.var12+`,`+stateval.var11+` `+stateval.var1+`,`+stateval.var10} />
+        
+        </g> 
         </defs>        
         </svg>  
         <input onChange={(e)=>onchangeinput(e)} ></input>
+        <button onClick={randomfixe}> Random </button>
         <svg  className="mandalaDisplay" >
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(10deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(20deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(30deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(30deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(40deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(50deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(50deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(60deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(70deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(70deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(80deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(90deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(90deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(100deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(110deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(110deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(120deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(130deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(130deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(140deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(150deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(160deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(150deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(160deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(170deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(180deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(180deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(190deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(200deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(200deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(210deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(220deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(220deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(230deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(240deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(240deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(250deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(260deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(260deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(270deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(280deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(280deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(290deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(300deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(300deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(310deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(320deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(320deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(330deg)`}} />
-            <use xlinkHref={`#line`+mand+`2`} className="rotation" style={{transform:`rotate(340deg)`}} />
+            <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(340deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(350deg)`}} />             
         </svg>
       </div>
