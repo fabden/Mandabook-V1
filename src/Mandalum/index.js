@@ -10,7 +10,6 @@ function Mandalum({mand}) {
 
   //fonction input controlé
   const onchangeinput = (e) =>{   
-
     const monb= md5(e.target.value);
     setstateval({...stateval,
       inputval:e.target.value,
@@ -38,6 +37,8 @@ function Mandalum({mand}) {
     var1:0,var2:0,var3:0,var4:0,var5:0,var6:0,var7:0,var8:0,var9:0,var10:0,var11:0,var12:0,var13:0,var14:0,var15:0,var16:0});
 
     };}
+
+    
    
 
     return (
