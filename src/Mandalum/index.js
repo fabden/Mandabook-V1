@@ -59,12 +59,7 @@ const randomfixe = ()=>{
   });
 }
 
-//random animation
-
-const randommove = ()=>{
-  
-}
-    
+   
 
     return (
       <div className="center">
@@ -74,12 +69,11 @@ const randommove = ()=>{
             <path d={`M `+stateval.var1+`,`+stateval.var2+` C `+stateval.var3+`,`+stateval.var4+` `+stateval.var5+`,`+stateval.var6+` `+stateval.var7+`,`+stateval.var8} />  
             <path d={`M `+stateval.var9+`,`+stateval.var10+` C `+stateval.var11+`,`+stateval.var12+` `+stateval.var13+`,`+stateval.var14+` `+stateval.var15+`,`+stateval.var16}/> 
             <path d={`M `+stateval.var16+`,`+stateval.var15+` C `+stateval.var14+`,`+stateval.var13+` `+stateval.var12+`,`+stateval.var11+` `+stateval.var1+`,`+stateval.var10} />
-        
         </g> 
         </defs>        
         </svg>  
         <input onChange={(e)=>onchangeinput(e)} ></input>
-        <button onClick={randomfixe}> Random </button>
+        <button onClick={(e)=>randomfixe(e)}> Random </button>
         <svg  className="mandalaDisplay" >
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
             <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} />
