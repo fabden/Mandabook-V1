@@ -11,7 +11,8 @@ function Mandalum({mand, type}) {
 
 //fonction input controlé
   const onchangeinput = (e) =>{   
-    const monb= md5(e.target.value);    
+    const monb= md5(e.target.value); 
+  
     setstateval({...stateval,
       inputval:e.target.value,
       var1:parseInt(monb.slice(0,2),16).toString(8),
@@ -62,31 +63,31 @@ const randomfixe = ()=>{
 // demarrage du compement
 useEffect(()=>{
   if(['citation'].includes(type)){randomfixe()}
-},[])
+},[0])
 
 //fonctin de personalisation input, message, paragraphe
   const renderdiv =(typecomp)=>{
     switch(typecomp){
-      case 'citation':         
-      
+      case 'citation':
         return ( 
-        <div >      
-        </div>
+          <AdSense.Google
+          client='ca-pub-9833070598471121'
+          slot='5695647839'
+          style={{ width: 250, height: 150 }}
+          format=''
+        />
         );
-
       case 'prenom':
-
         return (
         <>
-        <input onChange={(e)=>onchangeinput(e)} className="input_prenom"></input>
-        <p className="commentaire_prenom">Ton prénom en Mandala</p>
+        <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?"></input>
+        <p className="commentaire_prenom">Quel serai mon prenom en mandala ?</p>
         </>
         );
 
       case 'messagePerso':
-
         return (
-        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)}></textarea>
+        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)"></textarea>
         );
 
        default: <div></div>;
