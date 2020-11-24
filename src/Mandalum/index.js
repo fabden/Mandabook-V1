@@ -1,4 +1,5 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
+import AdSense from 'react-adsense';
 import md5 from 'md5';
 
 import './styles.css';
@@ -57,24 +58,38 @@ const randomfixe = ()=>{
     var15:Math.floor(Math.random()*255),
     var16:Math.floor(Math.random()*255),
   } )}
-  
+
+// demarrage du compement
+useEffect(()=>{
+  if(['citation'].includes(type)){randomfixe()}
+},[])
+
 //fonctin de personalisation input, message, paragraphe
   const renderdiv =(typecomp)=>{
     switch(typecomp){
-      case 'citation':
-
-        return <p className="input_message">paragraphe</p>;
+      case 'citation':         
+      
+        return ( 
+        <div >      
+        </div>
+        );
 
       case 'prenom':
 
-        return <input onChange={(e)=>onchangeinput(e)}></input>;
+        return (
+        <>
+        <input onChange={(e)=>onchangeinput(e)} className="input_prenom"></input>
+        <p className="commentaire_prenom">Ton prénom en Mandala</p>
+        </>
+        );
 
       case 'messagePerso':
 
-        return <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)}></textarea>;
+        return (
+        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)}></textarea>
+        );
 
        default: <div></div>;
-
 
     }}
 
