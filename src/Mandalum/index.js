@@ -80,14 +80,15 @@ useEffect(()=>{
       case 'prenom':
         return (
         <>
-        <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?"></input>
-        <p className="commentaire_prenom">Quel serai mon prenom en mandala ?</p>
+        <p className="commentaire_prenom">Quel serai ton prenom en mandala ?</p>
+        <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?" maxlength="25"></input>
+        
         </>
         );
 
       case 'messagePerso':
         return (
-        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)"></textarea>
+        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)" maxlength="100"></textarea>
         );
 
        default: <div></div>;

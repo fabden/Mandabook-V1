@@ -1,9 +1,23 @@
 import React from 'react';
+import './style.css';
+
 
 
 function Header (){
 
-    return(<div>header </div>)
+    return(
+    <header className="header_mandala">
+        <div className="header_image" alt="zen"></div>
+        <div className="header_text">
+            <h1 className="text_whrite">Mandalium</h1>
+            <p className="text_whrite">La source ne raconte qu'aux pierres discrètes ses aventures souterraines.</p>
+        </div>
+               
+        
+    </header>
+
+
+    )
 
     
 
