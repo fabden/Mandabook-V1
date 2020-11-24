@@ -76,3 +76,6 @@ path {fill : none ;
     text-align: center;
 
 }
+.pointeur{
+   cursor: pointer;
+}

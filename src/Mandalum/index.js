@@ -107,7 +107,7 @@ useEffect(()=>{
         </defs>        
         </svg>             
         <div className="message">
-          <svg  className="mandalaDisplay" viewBox="00 00 400 400" onClick={(['citation','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
+          <svg  className={(['citation','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur")} viewBox="00 00 400 400" onClick={(['citation','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} /> 
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(20deg)`}} />

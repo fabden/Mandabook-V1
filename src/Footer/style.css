@@ -1,0 +1,15 @@
+.section_footeur{
+
+    background-color: rgba(207, 206, 206, 0.52);
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;  
+    min-width: 1200px;
+    justify-content: center;
+}
+
+.divfooter{
+    width: 300px;
+}
+
