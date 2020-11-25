@@ -86,7 +86,7 @@ useEffect(()=>{
 
       case 'messagePerso':
         return (
-        <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)" maxLength="100"></textarea>
+        <textarea className="input_message" rows="6" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)" maxLength="100"></textarea>
         );
        default: <div></div>;
 
