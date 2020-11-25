@@ -16,8 +16,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;  
-  min-width: 1200px;
-  height: 700px;
+  min-width: 1200px; 
   justify-content: center;
   border: grey 1px solid;
   
