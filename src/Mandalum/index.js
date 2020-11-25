@@ -1,6 +1,10 @@
 import React,{useEffect, useState} from 'react';
 import AdSense from 'react-adsense';
 import md5 from 'md5';
+import iconeFacebook from '../asset/icones/facebook.svg';
+import iconeInstagram from '../asset/icones/instagram.svg'
+
+
 
 import './styles.css';
 
@@ -63,7 +67,7 @@ const randomfixe = ()=>{
 // demarrage du compement
 useEffect(()=>{
   if(['citation'].includes(type)){randomfixe()}
-},[0])
+},[])
 
 //fonctin de personalisation input, message, paragraphe
   const renderdiv =(typecomp)=>{
@@ -90,7 +94,6 @@ useEffect(()=>{
         return (
         <textarea className="input_message" rows="4" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)" maxLength="100"></textarea>
         );
-
        default: <div></div>;
 
     }}
@@ -146,6 +149,20 @@ useEffect(()=>{
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(350deg)`}} />             
           </svg>          
           {renderdiv(type)}
+          <p>Partagez !!!</p>
+          <div className='lien_social'>
+           <div>
+             <img src={iconeFacebook}  alt="icone facebook"
+    height="50px"
+    width="50px" stroke="grey"></img>
+           </div>
+           <div>
+           <img src={iconeInstagram}  alt="icone facebook"
+    height="50px"
+    width="50px" stroke="grey"></img>           
+           </div>
+
+          </div>          
          </div>
       </div>
     );

@@ -1,7 +1,7 @@
 .header_mandala{
     position: relative;
     height: 500px;
-    min-width: 1200px;
+    min-width: 1200px;    
 }
 
 .header_image{
@@ -35,8 +35,7 @@
 
 @media (max-width: 1000px) {
     .header_mandala {
-      min-width: 100%;
-      
+      min-width: 99%;   
           
     }
   }

@@ -27,7 +27,8 @@ path {fill : none ;
 .cardMandala{ 
     margin:10px; 
     width: 350px;
-    height: 600px; 
+    height: 700px; 
+
     
 }
 
@@ -38,11 +39,12 @@ path {fill : none ;
 .message{
     padding: 20px;
     width: 300px;
-    height: 500px;
+    height: 600px;
     border-radius:  300px 300px 15px 15px;
     border: 1px solid rgb(153, 148, 148);
     display: flex;
-    align-items: center;    
+    align-items: center; 
+    justify-content: space-around; 
     flex-direction: column;    
 }
 .input_message{ 
@@ -55,7 +57,7 @@ path {fill : none ;
     text-align: center;
     align-items: center;
     font-weight:bold;
-    color: rgb(53, 52, 52);
+    color: black;
 }
 .input_prenom{
     margin-top: 10px;
@@ -78,4 +80,11 @@ path {fill : none ;
 }
 .pointeur{
    cursor: pointer;
+}
+
+.lien_social{
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    margin:10px
 }
