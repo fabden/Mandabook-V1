@@ -16,9 +16,17 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;  
-  max-width: 1200px;
+  min-width: 1200px;
   justify-content: center;
+  border: grey 1px solid;
   
 }
+@media (max-width: 1000px) {
+  .section_application {
+    min-width: 100%;
+        
+  }
+}
+
 
 

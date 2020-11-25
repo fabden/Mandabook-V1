@@ -2,14 +2,22 @@
 
     background-color: rgba(207, 206, 206, 0.52);
     display: flex;  
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;  
-    min-width: 1200px;
-    justify-content: center;
+    flex-wrap: wrap;    
+    justify-content: space-between;  
+    min-width: 1200px;    
+    height: 250px;
+   
 }
 
 .divfooter{
-    width: 300px;
+    width: 350px;
+    
 }
+@media (max-width: 1000px) {
+    .section_footeur {
+      min-width: 100%;
+          
+    }
+
+  }
 

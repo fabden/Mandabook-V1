@@ -14,8 +14,8 @@ function App() {
         <Mandalum mand={2} type={"prenom"}/>
         <Mandalum mand={1} type={"citation"}/>
         <Mandalum mand={3} type={"messagePerso"}/>
-    </section>
-    <Footer />
+    </section>  
+    <Footer/>  
 </div>
     
   );
