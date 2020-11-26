@@ -1,9 +1,5 @@
 import React,{useEffect, useState} from 'react';
 import md5 from 'md5';
-import iconeFacebook from '../asset/icones/facebook.svg';
-import iconeInstagram from '../asset/icones/instagram.svg'
-
-
 
 import './styles.css';
 
@@ -44,6 +40,7 @@ function Mandalum({mand, type}) {
 
 //fonction randomfixe 
 const randomfixe = ()=>{ 
+  if(['citation'].includes(type)){
   setstateval({...stateval,    
     var1:Math.floor(Math.random()*255),
     var2:Math.floor(Math.random()*255),
@@ -61,14 +58,20 @@ const randomfixe = ()=>{
     var14:Math.floor(Math.random()*255),
     var15:Math.floor(Math.random()*255),
     var16:Math.floor(Math.random()*255),
-  } )}
+  } )}}
 
 // demarrage du compement
 useEffect(()=>{
-  if(['citation'].includes(type)){randomfixe()}
+  randomfixe()
 },[])
 
-//fonctin de personalisation input, message, paragraphe
+//fonction d'impression
+
+const printMandala =()=>{
+
+}
+
+//fonction de personalisation input, message, paragraphe
   const renderdiv =(typecomp)=>{
     switch(typecomp){
       case 'citation':
@@ -78,30 +81,26 @@ useEffect(()=>{
       case 'prenom':
         return (
         <>
-        <p className="commentaire_prenom">Quel serai ton prenom en mandala ?</p>
-        <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?" maxLength="25"></input>
-        
+          <p className="commentaire_prenom">Quel serai ton prenom en mandala ?</p>
+          <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?" maxLength="25"></input>        
         </>
         );
-
       case 'messagePerso':
         return (
         <textarea className="input_message" rows="6" cols="25" onChange={(e)=>onchangeinput(e)} placeholder="Un Message en Mandala ? (CLICK-ICI)" maxLength="100"></textarea>
         );
        default: <div></div>;
-
     }}
-
     return (
       <div className="cardMandala">
         <svg className="svgmettre">  
-        <defs>
-          <g id={`line`+mand+`1`}>            
-            <path d={`M `+stateval.var1+`,`+stateval.var2+` C `+stateval.var3+`,`+stateval.var4+` `+stateval.var5+`,`+stateval.var6+` `+stateval.var7+`,`+stateval.var8} />  
-            <path d={`M `+stateval.var9+`,`+stateval.var10+` C `+stateval.var11+`,`+stateval.var12+` `+stateval.var13+`,`+stateval.var14+` `+stateval.var15+`,`+stateval.var16}/> 
-            <path d={`M `+stateval.var16+`,`+stateval.var15+` C `+stateval.var14+`,`+stateval.var13+` `+stateval.var12+`,`+stateval.var11+` `+stateval.var1+`,`+stateval.var10} />
-        </g> 
-        </defs>        
+          <defs>
+            <g id={`line`+mand+`1`}>            
+              <path d={`M `+stateval.var1+`,`+stateval.var2+` C `+stateval.var3+`,`+stateval.var4+` `+stateval.var5+`,`+stateval.var6+` `+stateval.var7+`,`+stateval.var8} />  
+              <path d={`M `+stateval.var9+`,`+stateval.var10+` C `+stateval.var11+`,`+stateval.var12+` `+stateval.var13+`,`+stateval.var14+` `+stateval.var15+`,`+stateval.var16}/> 
+              <path d={`M `+stateval.var16+`,`+stateval.var15+` C `+stateval.var14+`,`+stateval.var13+` `+stateval.var12+`,`+stateval.var11+` `+stateval.var1+`,`+stateval.var10} />
+            </g> 
+          </defs>        
         </svg>             
         <div className="message">
           <svg  className={(['messagePerso','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur")} viewBox="00 00 400 400" onClick={(['messagePerso','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
@@ -143,20 +142,7 @@ useEffect(()=>{
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(350deg)`}} />             
           </svg>          
           {renderdiv(type)}
-          <p>Partagez !!!</p>
-          <div className='lien_social'>
-           <div>
-             <img src={iconeFacebook}  alt="icone facebook"
-    height="50px"
-    width="50px" stroke="grey"></img>
-           </div>
-           <div>
-           <img src={iconeInstagram}  alt="icone facebook"
-    height="50px"
-    width="50px" stroke="grey"></img>           
-           </div>
-
-          </div>          
+          <button onClick={()=>printMandala()}>Imprimer</button>             
          </div>
       </div>
     );
