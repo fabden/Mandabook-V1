@@ -1,0 +1,37 @@
+@media screen {
+.section_description{
+    display: flex;  
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 1200px; 
+    font-family: "soljik";
+    color: rgba(0, 0, 0, 0.527);
+    font-size: 2.3em;    
+    font-weight:bold;    
+    border-color: rgba(204, 204, 204, 0.568);
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+
+}
+.section_description_title{
+margin:1px;
+}
+.section_description_text{
+    margin:1px;
+}
+}
+
+@media (max-width: 1000px) {
+    .section_description {
+      min-width: 100%;
+      border: grey 0px solid;
+      padding: 0.5em;          
+    }
+  }
+  @media print {
+    .section_description{
+    display: none;}
+  }
