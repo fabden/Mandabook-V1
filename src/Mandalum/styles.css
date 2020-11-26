@@ -29,7 +29,7 @@ path {fill : none ;
 .cardMandala{ 
     margin:10px; 
     width: 350px;
-    height: 700px;     
+    height: 650px;     
 }
 
 .svgmettre{
@@ -73,9 +73,12 @@ path {fill : none ;
 }
 
 .commentaire_prenom{
-    font-size: 1.5em;
-    color:rgba(128, 128, 128, 0.589);
+    font-size: 2.5em;
+    color:rgba(128, 128, 128, 0.884);
     text-align: center;
+    font-family: "soljik";
+    font-weight:bold;
+    margin: 0.2em;
 
 }
 .pointeur{
@@ -86,13 +89,14 @@ path {fill : none ;
     margin: 5px;    
     width: 100px;
     padding: 2px;
-    color:rgba(128, 128, 128, 0.876);
+    color:rgba(0, 0, 0, 0.527);
     font-family: "soljik";
     font-weight:bold;
     font-size: 1.8em;
     border-radius: 5px;
     border: solid 1px rgba(128, 128, 128, 0.808);
     cursor: pointer;
+    background-color: rgb(255, 255, 255);
 }
 .noaffiche{
     display: none;

@@ -19,7 +19,7 @@
   justify-content: space-evenly;  
   min-width: 1200px; 
   justify-content: center;
-  border: grey 1px solid;
+  border: rgba(204, 204, 204, 0.568) 1px solid;
   
 }
 }
