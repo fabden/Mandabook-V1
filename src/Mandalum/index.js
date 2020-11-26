@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import md5 from 'md5';
-
+import AdSense from 'react-adsense';
 import './styles.css';
 
 function Mandalum({mand, type}) {
@@ -61,8 +61,9 @@ const randomfixe = ()=>{
   } )}}
 
 // demarrage du compement
-useEffect(()=>{
-  randomfixe()
+useEffect(()=>{ 
+  randomfixe();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
 //fonction d'impression
@@ -76,7 +77,15 @@ const printMandala =()=>{
     switch(typecomp){
       case 'citation':
         return ( 
-          <div>pub</div>
+          <div>
+        <AdSense.Google
+          client='ca-pub-9833070598471121'
+          slot='7414093615'
+          style={{ display: 'block' }}          
+          format='auto'
+          data-adtest="on"
+        />     
+     </div>
         );
       case 'prenom':
         return (
