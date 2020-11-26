@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import md5 from 'md5';
+import AdSense from 'react-adsense';
 
 import './styles.css';
 
@@ -76,7 +77,14 @@ const printMandala =()=>{
     switch(typecomp){
       case 'citation':
         return ( 
-          <div>pub</div>
+          <div>
+        <AdSense.Google
+          client='ca-pub-9833070598471121'
+          slot='7414093615'
+          style={{ display: 'block' }}          
+          format='auto'
+        />     
+     </div>
         );
       case 'prenom':
         return (
