@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import md5 from 'md5';
 import AdSense from 'react-adsense';
-
 import './styles.css';
 
 function Mandalum({mand, type}) {
@@ -64,6 +63,7 @@ const randomfixe = ()=>{
 // demarrage du compement
 useEffect(()=>{ 
   randomfixe();
+// eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
 //fonction d'impression
