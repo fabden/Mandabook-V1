@@ -62,8 +62,8 @@ const randomfixe = ()=>{
   } )}}
 
 // demarrage du compement
-useEffect(()=>{
-  randomfixe()
+useEffect(()=>{ 
+  randomfixe();
 },[])
 
 //fonction d'impression
@@ -83,6 +83,7 @@ const printMandala =()=>{
           slot='7414093615'
           style={{ display: 'block' }}          
           format='auto'
+          data-adtest="on"
         />     
      </div>
         );
