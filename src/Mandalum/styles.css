@@ -6,6 +6,8 @@
     font-family: "Astagina";
     src: url('../asset/font/Astagina\ Signature.otf')
 }
+
+@media screen {
 .mandalaDisplay{
     min-width:300px;
     min-height:300px;  
@@ -27,9 +29,7 @@ path {fill : none ;
 .cardMandala{ 
     margin:10px; 
     width: 350px;
-    height: 700px; 
-
-    
+    height: 700px;     
 }
 
 .svgmettre{
@@ -82,3 +82,102 @@ path {fill : none ;
    cursor: pointer;
 }
 
+.btnimp{
+    margin: 5px;    
+    width: 100px;
+    padding: 2px;
+    color:rgba(128, 128, 128, 0.876);
+    font-family: "soljik";
+    font-weight:bold;
+    font-size: 1.8em;
+    border-radius: 5px;
+    border: solid 1px rgba(128, 128, 128, 0.808);
+    cursor: pointer;
+}
+.noaffiche{
+    display: none;
+}
+}
+
+@media print {
+    .mandalaDisplay{
+        min-width:300px;
+        min-height:300px;  
+        border-radius: 100%;    
+        background-color:transparent;   
+        border: 2px solid rgb(53, 52, 52);   
+        margin-bottom: 10px; 
+    }
+    
+    path {fill : none ;
+         stroke-width : 1  ; 
+         stroke : rgb(53, 52, 52);   
+        }
+    
+    .rotation{    
+        stroke : rgb(85, 51, 51); 
+        transform-origin: center
+    }
+    .cardMandala{ 
+        margin:10px; 
+        width: 400px;
+        height: 1000px;     
+    }
+    
+    .svgmettre{
+        display: none;
+    }
+    
+    .message{
+        padding: 20px;
+        width: 300px;
+        height: 900px;
+        border-radius:  300px 300px 15px 15px;
+        border: 1px solid rgb(153, 148, 148);
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        flex-direction: column;    
+    }
+    .input_message{ 
+        border: none;
+        font-size: 2.4em; 
+        margin-bottom: 250px;  
+        font-family: "soljik";
+        resize : none;
+        width: 95%;    
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+        font-weight:bold;
+        color: black;
+    }
+    .input_prenom{
+        margin-top: 10px;
+        margin-bottom: 350px;
+        height: 40px;
+        width: 100%;
+        font-size: 2.4em;
+        text-align: center;
+        border:none;
+        font-family: "soljik";
+        font-weight:bold;
+    }
+    
+    .commentaire_prenom{
+        font-size: 1.5em;
+        color:rgba(128, 128, 128, 0.589);
+        text-align: center;
+    
+    }
+    .pointeur{
+       cursor: pointer;
+    }
+
+    .noprint{
+        display:none;
+    }
+
+
+}
+    

@@ -68,7 +68,7 @@ useEffect(()=>{
 //fonction d'impression
 
 const printMandala =()=>{
-
+  window.print()
 }
 
 //fonction de personalisation input, message, paragraphe
@@ -81,8 +81,8 @@ const printMandala =()=>{
       case 'prenom':
         return (
         <>
-          <p className="commentaire_prenom">Quel serai ton prenom en mandala ?</p>
-          <input onChange={(e)=>onchangeinput(e)} className="input_prenom" placeholder="tu t'appel?" maxLength="25"></input>        
+          <p className="commentaire_prenom noprint">Quel serai ton prenom en mandala ?</p>
+          <input onChange={(e)=>onchangeinput(e)} className="input_prenom " placeholder="tu t'appel?" maxLength="25"></input>        
         </>
         );
       case 'messagePerso':
@@ -92,7 +92,7 @@ const printMandala =()=>{
        default: <div></div>;
     }}
     return (
-      <div className="cardMandala">
+      <div className={(['messagePerso','prenom'].includes(type))?("cardMandala"):("cardMandala noprint")}>
         <svg className="svgmettre">  
           <defs>
             <g id={`line`+mand+`1`}>            
@@ -103,7 +103,7 @@ const printMandala =()=>{
           </defs>        
         </svg>             
         <div className="message">
-          <svg  className={(['messagePerso','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur")} viewBox="00 00 400 400" onClick={(['messagePerso','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
+          <svg  className={(['messagePerso','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur ")} viewBox="00 00 400 400" onClick={(['messagePerso','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} /> 
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(20deg)`}} />
@@ -142,7 +142,7 @@ const printMandala =()=>{
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(350deg)`}} />             
           </svg>          
           {renderdiv(type)}
-          <button onClick={()=>printMandala()}>Imprimer</button>             
+          <button className={(['messagePerso','prenom'].includes(type))?("noprint btnimp"):("noaffiche")} onClick={()=>printMandala()}>Imprimer</button>             
          </div>
       </div>
     );
