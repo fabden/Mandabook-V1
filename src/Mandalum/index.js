@@ -40,7 +40,7 @@ function Mandalum({mand, type}) {
 
 //fonction randomfixe 
 const randomfixe = ()=>{ 
-  if(['citation'].includes(type)){
+  if(['citation'].includes(type)){   
   setstateval({...stateval,    
     var1:Math.floor(Math.random()*255),
     var2:Math.floor(Math.random()*255),
@@ -58,11 +58,11 @@ const randomfixe = ()=>{
     var14:Math.floor(Math.random()*255),
     var15:Math.floor(Math.random()*255),
     var16:Math.floor(Math.random()*255),
-  } )}}
+  })}}
 
 // demarrage du compement
 useEffect(()=>{ 
-  randomfixe();
+  randomfixe();  
 // eslint-disable-next-line react-hooks/exhaustive-deps
 },[])
 
@@ -112,7 +112,7 @@ const printMandala =()=>{
           </defs>        
         </svg>             
         <div className="message">
-          <svg  className={(['messagePerso','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur ")} viewBox="00 00 400 400" onClick={(['messagePerso','prenom'].includes(type))?(null):((e)=>randomfixe(e))}>
+          <svg  className={(['messagePerso','prenom'].includes(type))?("mandalaDisplay"):("mandalaDisplay pointeur ")} viewBox="00 00 400 400" onClick={(['messagePerso','prenom'].includes(type))?(null):((e)=>randomfixe(e))} >
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(0deg)`}} />
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(10deg)`}} /> 
               <use xlinkHref={`#line`+mand+`1`} className="rotation" style={{transform:`rotate(20deg)`}} />

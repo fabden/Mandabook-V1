@@ -11,9 +11,7 @@
             min-width: 1200px;            
             border: rgba(204, 204, 204, 0.452) 1px solid;
             padding-bottom: 2em;  
-            background-color: rgba(204, 204, 204, 0.568);           
-            
-                              
+            background-color: rgba(204, 204, 204, 0.568); 
     }
     .section_footer_text{              
         font-family: "soljik";
