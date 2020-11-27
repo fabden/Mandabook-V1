@@ -3,7 +3,10 @@
 .header_mandala{
     position: relative;
     height: 500px;
-    min-width: 1200px;    
+    min-width: 1200px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
 }
 
 .header_image{
@@ -31,13 +34,15 @@
     justify-content:center;
     align-items: center;
     font-family: "soljik";
-    font-size: 4em;
+    font-size: 3em;
     
 }}
 
 @media (max-width: 1000px) {
     .header_mandala {
-      min-width: 99%;   
+        min-width: 95%;
+        
+        
           
     }
   }

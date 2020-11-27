@@ -27,9 +27,15 @@ margin:1px;
 @media (max-width: 1000px) {
     .section_description {
       min-width: 100%;
-      border: grey 0px solid;
-      padding: 0.5em;          
+      border: grey 0px solid;                
     }
+
+    .section_description_title{
+      padding:5px;
+      }
+      .section_description_text{
+        padding:5px;
+      }
   }
   @media print {
     .section_description{
